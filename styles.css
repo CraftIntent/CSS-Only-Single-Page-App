@@ -1,0 +1,46 @@
+/* Hide the radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style the navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.navigation label {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Hide all content sections by default */
+.home-content,
+.about-content,
+.contact-content {
+    display: none;
+}
+
+.selected-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+/* Show the corresponding content when the radio button is checked */
+#home-nav:checked ~ section .home-content,
+#about-nav:checked ~ section .about-content,
+#contact-nav:checked ~ section .contact-content {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    text-align: left;
+    min-width: 50%;
+    border: 1px solid black;
+    padding: 50px;
+}

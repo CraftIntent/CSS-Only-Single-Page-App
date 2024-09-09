@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Only SPA</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- noteice inputs themselves are at the top of the tree to make using sibling selector easier -->
+    <input type="radio" name="page" checked id="home-nav">
+    <input type="radio" name="page" id="about-nav">
+    <input type="radio" name="page" id="contact-nav">
+    <nav class="navigation">
+        <label for="home-nav" class="home-nav" id="home-nav">home</label>
+        <label for="about-nav" class="about-nav" id="about-nav">about</label>
+        <label for="contact-nav" class="contact-nav" id="contact-nav">contact</label>
+    </nav>
+    <section class="selected-content">
+        <div class="home-content">
+            <h1>Home</h1>
+            <p>Home content goes here</p>
+        </div>
+        <div class="about-content">
+            <h1>About</h1>
+            <p>About content goes here</p>
+        </div>
+        <div class="contact-content">
+            <h1>Contact</h1>
+            <p>Contact content goes here</p>
+        </div>
+    </section>
+</body>
+</html>
